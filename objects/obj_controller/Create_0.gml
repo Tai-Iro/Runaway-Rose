@@ -1,5 +1,6 @@
-i = 0
-level_change = 0
+
+i = 0 //Counter for block generation
+level_change = 0 
 level = 0
 spawn = true
 
@@ -13,3 +14,5 @@ make=1 //1 is blocks, 0 is gaps
 
 //To make the game choose a random seed every time it's run:
 //randomize();
+
+instance_create(0,0,obj_hp);
