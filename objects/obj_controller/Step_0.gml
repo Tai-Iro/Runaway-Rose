@@ -13,7 +13,10 @@ Notes for floor generation:
 	*It shouldn't generate any impossible or pixel-perfect jumps
 */
 
-
+if gameover
+{
+	room_restart();
+}
 
 if level_change = 0{
 
@@ -52,9 +55,14 @@ if i = 0{
 	*/
 	//gap=round(random_range(64,64*3))
 	group = round(random_range(2,8))
+	var inst;
 	for(k=0; k<=group; k++)
 	{
-		instance_create(gap+640+(64*k),360-64+(level * 16),obj_block)
+		inst = instance_create(gap+640+(64*k),360-64+(level * 16),obj_block)
+		inst.type = "house"
+		inst.seg = (k==0) ? (-1) : ((k>=group) ? 1 : 0)
+		r = (296+(level*16) >= 296) ? round(random_range(1,10)) : round(random_range(3,10))
+		inst.xtile = (r<=2) ? (1) : ((r<=5) ? 4 : ((r<=8) ? 3 : 2))
 	}
 	i= (group*64 + gap) div spd
 	gap=round(random_range(64,64*3)) //0

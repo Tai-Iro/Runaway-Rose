@@ -85,16 +85,18 @@ if keyboard_check(vk_down){
 if x < -256{
 //"Game Over" code, maybe should be in controller(?)
 //Needs to play losing animation, and add score to highscores if good enough
-    room_restart()
-
+    //room_restart()
+	obj_controller.gameover=true;
 }
 if health < 0{
 	//fall over animation, then game over
-	room_restart();
+	//room_restart();
+	obj_controller.gameover=true;
 }
 if y > 512{
 	//fell down a ditch
-	room_restart();
+	//room_restart();
+	obj_controller.gameover=true;
 }
 
 if (place_meeting(x, y + vsp, obj_block)) { 

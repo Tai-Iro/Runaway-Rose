@@ -16,3 +16,5 @@ make=1 //1 is blocks, 0 is gaps
 //randomize();
 
 instance_create(0,0,obj_hp);
+
+gameover=false
