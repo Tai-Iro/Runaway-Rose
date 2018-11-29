@@ -106,7 +106,7 @@
             "m_serialiseFrozen": false,
             "modelName": "GMRBackgroundLayer",
             "mvc": "1.0",
-            "spriteId": "b3cf9622-664a-4b89-a0e6-4f937db4054f",
+            "spriteId": "d65685b6-8d02-415e-b07d-6b63a5d4b21a",
             "stretch": false,
             "userdefined_animFPS": false,
             "userdefined_depth": true,
@@ -114,7 +114,7 @@
             "vspeed": 0,
             "vtiled": true,
             "x": 0,
-            "y": 0
+            "y": 20
         },
         {
             "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",

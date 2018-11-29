@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "b1180828-1bfe-450e-be5f-e5d5ff64d334",
+            "Value": {
+                "id": "f6498e78-cc1c-4ccb-96e0-7149fe2aaa0a",
+                "resourcePath": "sounds\\snd_music\\snd_music.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b3cf9622-664a-4b89-a0e6-4f937db4054f",
             "Value": {
                 "id": "d0700b2c-a872-4738-9d87-8eaae2845789",
@@ -412,6 +420,14 @@
                 "id": "eff378ff-db9d-4a66-9e0d-309f134cf70d",
                 "resourcePath": "views\\e72b5ef8-1c74-48bc-b695-92daf6fcdccc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e96fb582-2c98-4ec2-b164-54c8bd202ae9",
+            "Value": {
+                "id": "0ef07836-d259-4cbf-8c0f-26b65fad1d16",
+                "resourcePath": "sprites\\cherub_UI\\cherub_UI.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

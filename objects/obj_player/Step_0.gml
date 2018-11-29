@@ -72,15 +72,6 @@ else{
     }
 
 }
-if keyboard_check(vk_down){
-
-    is_sliding = true
-
-}else{
-
-    is_sliding = false
-
-}
 
 if x < -256{
 //"Game Over" code, maybe should be in controller(?)
