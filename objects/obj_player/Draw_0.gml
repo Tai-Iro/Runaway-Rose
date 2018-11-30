@@ -1,13 +1,34 @@
 if !is_sliding{
-	if place_meeting(x,y+1,obj_block){
+	
+	//if hurt, change the sprite info
+	if(stunTimer > 118){
+		sprite_index = spr_player_hurt;
+		image_index = 0;
+		//image_speed = 0.12;
+	}
+	
+	if /*(stunTimer > 0) && */(sprite_index == spr_player_hurt){
+		//after hurt anim ends, change back to normal sprite info
+		//could also just use an "Animation End" event
+		if (stunTimer < 100) && (image_index < 1){
+			sprite_index = spr_player_run2;
+			image_index = 0;
+			//image_speed = 0.27;
+		}
+	}
+	else if place_meeting(x,y+1,obj_block){
     //draw_sprite(spr_player_run2,-1,x,y)
-	sprite_index = spr_player_run2;
+	//if (sprite_index != spr_player_hurt){
+		sprite_index = spr_player_run2;
+	//}
 	}
 	
 	else if place_meeting(x+1,y,obj_block){
     //draw_sprite(spr_player_run2,0,x,y)
-	sprite_index = spr_player_run2;
-	image_index = 0;
+	//if (sprite_index != spr_player_hurt){
+		sprite_index = spr_player_run2;
+		image_index = 0;
+	//}
 	}
 	
 	else{
@@ -19,6 +40,7 @@ if !is_sliding{
 	sprite_index = spr_player_run2
 	image_index = 8;
 	}
+
 }
 else{
 
@@ -30,6 +52,8 @@ else{
 }
 if obj_controller.debug = true{
 	draw_text(0,150,"stuntimer: " + string_hash_to_newline(stunTimer))
+	draw_text(0,175,"index: " + string_hash_to_newline(image_index))
+	draw_text(0,200,"number: " + string_hash_to_newline(image_number))
 }
 draw_self();
 //sprite_index

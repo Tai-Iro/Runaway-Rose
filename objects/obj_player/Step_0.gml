@@ -49,6 +49,8 @@ if (place_meeting(x + spd /*4*/, y, obj_block)) {
 	//get hurt, and start stunTimer
 	if stunTimer <= 0
 	{
+		//sprite_index = spr_player_hurt;
+		//image_index = 0;
 		stunTimer = 120;
 		health -= 1;
 		//image_angle = -30
